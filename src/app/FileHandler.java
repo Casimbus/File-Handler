@@ -17,9 +17,9 @@ public class FileHandler {
         }
     }
 
-    public String readFile(String path) {
+    public String readFile(String fileName) {
         StringBuilder str = new StringBuilder();
-        try (FileReader reader = new FileReader(BASE_PATH + path + ".txt")) {
+        try (FileReader reader = new FileReader(BASE_PATH + fileName + ".txt")) {
             int sym;
             while ((sym = reader.read()) != -1) {
                 str.append((char) sym);
